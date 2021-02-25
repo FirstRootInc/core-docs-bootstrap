@@ -1,13 +1,13 @@
 module.exports = {
-  title: 'FirstRoot Participatory Budgeting App',
-  tagline: 'The tagline of my site',
-  url: 'https://your-docusaurus-test-site.com',
+  title: 'FirstRoot Participatory Budgeting API',
+  tagline: "We're the easy button for proticipatory budgeting.",
+  url: '  url: 'https://firstrootinc.github.io/core-docs-bootstrap',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'FirstRootInc', // Usually your GitHub org/user name.
+  projectName: 'core-docs-bootstrap', // Usually your repo name.
   themeConfig: {
     navbar: {
       title: 'My Site',
