@@ -1,5 +1,5 @@
 module.exports = {
-  title: 'My Site',
+  title: 'FirstRoot Participatory Budgeting App',
   tagline: 'The tagline of my site',
   url: 'https://your-docusaurus-test-site.com',
   baseUrl: '/',
