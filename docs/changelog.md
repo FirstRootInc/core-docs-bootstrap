@@ -1,4 +1,4 @@
 ---
-id: doc5
+id: changelog
 title: Breaking changes / changelog
 ---

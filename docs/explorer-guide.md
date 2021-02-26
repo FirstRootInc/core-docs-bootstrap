@@ -1,4 +1,4 @@
 ---
-id: doc9
+id: explorer-guide
 title: Using GraphQL Playground / Voyager
 ---

@@ -1,4 +1,4 @@
 ---
-id: doc4
+id: explorer
 title: GraphQL Playground / Voyager / GraphiQL
 ---
