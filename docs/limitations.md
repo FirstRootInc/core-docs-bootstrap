@@ -1,4 +1,4 @@
 ---
-id: doc6
+id: limitations
 title: Resource limitations
 ---

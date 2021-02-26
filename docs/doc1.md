@@ -76,6 +76,10 @@ Some text to show that the reference links can follow later.
 [1]: http://slashdot.org/
 [link text itself]: http://www.reddit.com/
 
+This is a link to [another document.](doc3.md) This is a link to an [external page.](http://www.example.com/)
+
+[create an anchor](#anchors-in-markdown)
+
 ---
 
 ## Images

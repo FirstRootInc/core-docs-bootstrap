@@ -1,4 +1,4 @@
 ---
-id: doc8
+id: graphql
 title: Introduction to GraphQL
 ---
