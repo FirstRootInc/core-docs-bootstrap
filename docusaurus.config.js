@@ -1,7 +1,7 @@
 module.exports = {
   title: 'FirstRoot Participatory Budgeting API',
   tagline: "We're the easy button for proticipatory budgeting.",
-  url: '  url: 'https://firstrootinc.github.io/core-docs-bootstrap',
+  url: 'https://firstrootinc.github.io/core-docs-bootstrap',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -10,10 +10,10 @@ module.exports = {
   projectName: 'core-docs-bootstrap', // Usually your repo name.
   themeConfig: {
     navbar: {
-      title: 'My Site',
+      title: null ,
       logo: {
-        alt: 'My Site Logo',
-        src: 'img/logo.svg',
+        alt: 'FirstRoot Logo',
+        src: 'img/FirstRoot-Logo.png',
       },
       items: [
         {
@@ -22,7 +22,7 @@ module.exports = {
           label: 'Docs',
           position: 'left',
         },
-        {to: 'blog', label: 'Blog', position: 'left'},
+        {to: 'forum', label: 'Forum', position: 'left'},
         {
           href: 'https://github.com/facebook/docusaurus',
           label: 'GitHub',
