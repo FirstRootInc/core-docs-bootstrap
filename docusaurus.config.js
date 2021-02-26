@@ -3,7 +3,7 @@ module.exports = {
   tagline: "We're the easy button for proticipatory budgeting.",
   url: 'https://firstrootinc.github.io/core-docs-bootstrap',
   baseUrl: '/',
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   organizationName: 'FirstRootInc', // Usually your GitHub org/user name.
@@ -22,7 +22,6 @@ module.exports = {
           label: 'Docs',
           position: 'left',
         },
-        {to: 'forum', label: 'Forum', position: 'left'},
         {
           href: 'https://github.com/facebook/docusaurus',
           label: 'GitHub',
