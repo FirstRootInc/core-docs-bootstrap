@@ -1,7 +1,7 @@
 module.exports = {
   sidebar: {
     'Overview' : [
-        'doc1',
+        'style-guide',
         'introduction',
         'references', 
         'explorer', 
