@@ -1,6 +1,6 @@
 ---
 id: graphql
-title: GraphQL Ressources
+title: GraphQL Resources
 ---
 
 - [Guides and Best Practices](https://www.graphql.com/guides/)
