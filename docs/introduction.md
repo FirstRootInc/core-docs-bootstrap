@@ -2,6 +2,7 @@
 id: introduction
 title: Introduction
 ---
+Welcome to the FirstRoot API documentation portal where you’ll find all necessary infomation about our Participatory Budgeting App. 
 
 The FirstRoot API is a GraphQL API. The [GraphQL query language](https://graphql.org/learn/) provides a complete and understandable description of the data in our API. 
 
