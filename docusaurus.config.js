@@ -49,11 +49,11 @@ module.exports = {
           title: 'Community',
           items: [
             {
-              label: 'Stack Overflow',
+              label: 'Facebook',
               href: 'https://stackoverflow.com/questions/tagged/docusaurus',
             },
             {
-              label: 'Discord',
+              label: 'LinkedIn',
               href: 'https://discordapp.com/invite/docusaurus',
             },
             {
@@ -76,7 +76,7 @@ module.exports = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} FirstRoot, Inc. Built with Love.`,
     },
   },
   presets: [
