@@ -30,7 +30,7 @@ module.exports = {
       ],
     },
     footer: {
-      style: 'dark',
+      style: 'Dark',
       links: [
         {
           title: 'Docs',
@@ -46,7 +46,7 @@ module.exports = {
           ],
         },
         {
-          title: 'Community',
+          title: 'Follow us',
           items: [
             {
               label: 'Facebook',
@@ -63,15 +63,15 @@ module.exports = {
           ],
         },
         {
-          title: 'More',
+          title: 'Community',
           items: [
             {
               label: 'Blog',
-              to: 'blog',
+              href: 'https://firstroot.co/blog',
             },
             {
               label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              href: 'https://github.com/FirstRootInc',
             },
           ],
         },
