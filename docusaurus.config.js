@@ -1,6 +1,6 @@
 module.exports = {
   title: 'FirstRoot Participatory Budgeting API',
-  tagline: "We're the easy button for proticipatory budgeting.",
+  tagline: "We're the easy button for participatory budgeting.",
   url: 'https://firstrootinc.github.io',
   baseUrl: '/core-docs-bootstrap/',
   onBrokenLinks: 'warn',
