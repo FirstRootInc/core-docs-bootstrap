@@ -101,4 +101,5 @@ module.exports = {
       },
     ],
   ],
+  plugins: ["@edno/docusaurus2-graphql-doc-generator"],
 };

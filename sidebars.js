@@ -5,16 +5,10 @@ module.exports = {
         'introduction',
         'references', 
         'explorer', 
-        'changelog', 
-        'limitations'
     ],
     'Core Concepts' : [
         'pbcycle',
-        'planning',
-        'ideation',
-        'refinement',
-        'voting',
-        'ratification',
+        'user',
     ],
     'Guides' : [
         'graphql', 
