@@ -8,7 +8,7 @@ module.exports = {
     ],
     'Core Concepts' : [
         'pbcycle',
-        'user',
+        'user-inv',
     ],
     'Guides' : [
         'graphql', 
