@@ -1,19 +1,17 @@
 ---
 id: pbcycle
-title: Flow of a PB Cycle
+title: PB Cycle
 ---
 
-The PBCycle object represents an instance of Participatory Budgeting cycle for a given organisation, like a School or School Group. 
+The **PBCycle** object represents an instance of a Participatory Budgeting Cycle for any given  organization like a school, a class, or a group of people that want to make a budgetary choice collaboratively. Every PBCycle follows this flow/process:
 
-Every PBCycle guides you through the process of
+1. **Planning** - Administrators define a theme, budget, categories and schedule
+2. **Ideation** - Participants submit, edit and share their proposals
+3. **Refinement** - Administrators and leaders hand-pick the best proposals
+4. **Voting** - Participants vote, and admins do a voting results ratification process
+5. **Implementation** - Based on voting results, winning proposals get done!
 
-1. Planning the coming cycle,
-2. [Collecting ideas from the participants and creating proposals](#proposals),
-3. [Refining](#ballots) the proposals,
-4. The [Voting phase](voting) followed by [the voting result ratification phase](ratification),
-5. and ends with the implementation of the winning proposal(s).
-
-The different Phases are created using the following mutation:
+Here is an example on how to use the corresponding mutation:
 
 ```python
 from datetime import datetime, timezone, timedelta
@@ -52,7 +50,7 @@ def create_phase(name, pb_cycle_id, from_date=None, to_date=None):
 
 ### createPbCycle
 
-Using this mutation creates a valid object, which can later be edited:
+By using this mutation a valid object is created; Which can later be edited.
 
 ```python
 from datetime import datetime, timezone, timedelta

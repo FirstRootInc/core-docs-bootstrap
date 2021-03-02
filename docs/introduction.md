@@ -1,13 +1,14 @@
 ---
 id: introduction
-title: Introduction
+title: Get Started
 ---
 
-The FirstRoot API is a GraphQL API. The [GraphQL query language](https://graphql.org/learn/) provides a complete and understandable description of the data in our API. 
+Welcome to the FirstRoot GraphQL API documentation. 
 
-GraphQL APIs are organized in terms of types and fields, so all the data is accessed through a single endpoint.
-A GraphQL call's structure is similar to the JSON data it returns. Nested fields let you query for specific data your app requires in a single request.
+The [GraphQL query language](https://www.graphql.com/) provides a complete and understandable description of the data in our API. This is commonly organized in terms of types and fields, this means that all the data can be accessed through a single endpoint.
 
-Using [GraphQL Playground](https://github.com/graphql/graphql-playground) you can easily view the [FirstRoot API schema](references.md) including the reference documentation of the queries and mutations.
+A GraphQL call’s structure is similar to the JSON data it returns; Nested fields will allow you to query for specific data your app requires through a single request.
 
-We linked more great ressources to get familiar with and learn GraphQL [here](graphql.md).
+[GraphQL playground](explorer-guide.md) will enable you to easily view at the [FirstRoot API Schema](references.md) including the reference documentation of the queries and mutations.
+
+Additionally, we have linked several other [GraphQL resources](graphql.md) so you can get familiar with this language and continue learning how it works.

@@ -1,18 +1,17 @@
 module.exports = {
   sidebar: {
     'Overview' : [
-        'style-guide',
         'introduction',
-        'references', 
-        'explorer', 
+        'references',
     ],
     'Core Concepts' : [
         'pbcycle',
-        'user-inv',
+        'pb-inv',
     ],
     'Guides' : [
         'graphql', 
-        'explorer-guide'
+        'explorer-guide',
+        'explorer-guide-2',
     ],
   },
 };

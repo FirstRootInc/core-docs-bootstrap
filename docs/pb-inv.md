@@ -1,13 +1,13 @@
 ---
-id: user-inv
-title: Participant Invitation
+id: pb-inv
+title: PB Invite
 ---
 
-This section goes through the process of inviting participants to an existing PBCycle with code snippets written in python as an example on how to integrate the different components in your app.
+After successfully creating a PB Cycle, the next step would be to begin inviting participants to join. This section covers how to do the invite process, and shows code snippets written in Python as an example of how to integrate different components in the app.
 
-1. The invitation process starts by [creating a new token](#createPbCycleInvitationToken). This token can be integrated/added to a link and send to the participants.
-2. Invited participants accept to participate in the cycle and can access the PBCycle either through an existing account or by [creating a new one](#createuser).
-3. If a user with an existing account 
+1. The invite process starts with creating a new token, this can be integrated/added to a hyperlink to share with the participants of a PB cycle.
+2. Invited participants will be able to accept the invite and join the PB cycle by creating a new account (for new users) or through the login form (for existing users).
+
 
 ### createPbCycleInvitationToken
 
