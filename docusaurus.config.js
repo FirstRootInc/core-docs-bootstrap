@@ -17,7 +17,7 @@ module.exports = {
       },
       items: [
         {
-          to: 'docs/introduction',
+          to: '/',
           activeBasePath: 'docs',
           label: 'Docs',
           position: 'left',
@@ -37,7 +37,7 @@ module.exports = {
           items: [
             {
               label: 'Get Started',
-              to: 'docs/introduction',
+              to: '/',
             },
             {
               label: 'Second Doc',
@@ -84,6 +84,7 @@ module.exports = {
       '@docusaurus/preset-classic',
       {
         docs: {
+          routeBasePath: '/',
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           editUrl:
@@ -101,5 +102,5 @@ module.exports = {
       },
     ],
   ],
-  plugins: ["@edno/docusaurus2-graphql-doc-generator"],
+  plugins: ['@edno/docusaurus2-graphql-doc-generator'],
 };

@@ -3,7 +3,7 @@ id: references
 title: Public Schema
 ---
 
-Feel free to download our public schema for the FirstRoot GraphQL API here.
+Feel free to download our public schema for the FirstRoot GraphQL API [here](http://api-staging.firstroot.co/graphiql).
 
 You can go to the [GraphQL Playground](explorer-guide) to test our API schema, queries and mutations.
 

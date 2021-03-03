@@ -3,7 +3,9 @@ id: pbcycle
 title: PB Cycle
 ---
 
-The **PBCycle** object represents an instance of a Participatory Budgeting Cycle for any given  organization like a school, a class, or a group of people that want to make a budgetary choice collaboratively. Every PBCycle follows this flow/process:
+In this section we describe a Participatory Budgeting Cycle on an object-level. For more information about what a PB Cycle is, visite [our website](https://firstroot.co/teacher-resources/), which includes many great ressources.
+
+The **PBCycle** object represents an instance of a Participatory Budgeting Cycle for any given  organization like a school, a class, or a group of people that wants to make a budgetary choice collaboratively. Every PBCycle follows this flow/process:
 
 1. **Planning** - Administrators define a theme, budget, categories and schedule
 2. **Ideation** - Participants submit, edit and share their proposals
@@ -16,7 +18,7 @@ Here is an example on how to use the corresponding mutation:
 ```python
 from datetime import datetime, timezone, timedelta
 
-def create_phase(name, pb_cycle_id, from_date=None, to_date=None):
+def create_phase(name, pb_cycle_id, from_date, to_date):
   # Possible names: "PLANNING","IDEATION","REFINEMENT","VOTING","VOTING_RESULTS_RATIFICATION","FUNDING","IMPLEMENTATION"
   if (from_date == None):
     from_date = datetime.now(timezone.utc)

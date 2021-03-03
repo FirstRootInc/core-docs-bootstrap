@@ -1,6 +1,7 @@
 ---
 id: introduction
 title: Get Started
+slug: /
 ---
 
 Welcome to the FirstRoot GraphQL API documentation. 
