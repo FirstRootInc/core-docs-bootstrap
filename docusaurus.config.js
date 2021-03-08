@@ -27,6 +27,11 @@ module.exports = {
           label: 'GitHub',
           position: 'right',
         },
+        {
+          to: "/firstroot", // adjust the location depending on your baseURL (see configuration)
+          label: "Firstroot Schema", // change the label with yours
+          position: "left",
+        },
       ],
     },
     footer: {
@@ -102,5 +107,15 @@ module.exports = {
       },
     ],
   ],
-  plugins: ['@edno/docusaurus2-graphql-doc-generator'],
+  plugins: [
+    [
+      '@edno/docusaurus2-graphql-doc-generator',
+      {
+        schema: "http://api-staging.firstroot.co/graphiql",
+        rootPath: "./docs",
+        baseURL: "firstroot",
+        homepage: "./docs/firstroot.md",
+      }
+    ],
+  ]
 };

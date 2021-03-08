@@ -5,93 +5,39 @@ title: PB Cycle
 
 In this section we describe a Participatory Budgeting Cycle on an object-level. For more information about what a PB Cycle is, visite [our website](https://firstroot.co/teacher-resources/), which includes many great ressources.
 
-The **PBCycle** object represents an instance of a Participatory Budgeting Cycle for any given  organization like a school, a class, or a group of people that wants to make a budgetary choice collaboratively. Every PBCycle follows this flow/process:
+The **PBCycle** object represents an instance of a Participatory Budgeting Cycle for any given  organization like a school, a class, or a group of people that wants to make a budgetary choice collaboratively. By using the `createPbCycle` mutation a valid object is created; Which can later be edited.
 
-1. **Planning** - Administrators define a theme, budget, categories and schedule
-2. **Ideation** - Participants submit, edit and share their proposals
-3. **Refinement** - Administrators and leaders hand-pick the best proposals
-4. **Voting** - Participants vote, and admins do a voting results ratification process
+Every PBCycle follows this flow/process:
+
+1. **Planning** - Administrators define a theme, budget, categories and a schedule
+2. [**Ideation**](#ideation-phase) - Participants submit, edit and share their [proposals](#proposals)
+3. [**Refinement**](#refinment-phase) - Administrators and leaders hand-pick the best proposals by preparing a [ballot](#ballots)
+4. [**Voting**](#voting-phase) - Participants vote, and admins do a voting results ratification process
 5. **Implementation** - Based on voting results, winning proposals get done!
 
-Here is an example on how to use the corresponding mutation:
+The phases are created using the `createPhase`mutation.
 
-```python
-from datetime import datetime, timezone, timedelta
-
-def create_phase(name, pb_cycle_id, from_date, to_date):
-  # Possible names: "PLANNING","IDEATION","REFINEMENT","VOTING","VOTING_RESULTS_RATIFICATION","FUNDING","IMPLEMENTATION"
-  if (from_date == None):
-    from_date = datetime.now(timezone.utc)
-  if (to_date == None):
-    to_date = from_date + timedelta(days=21)
-  if (pb_cycle_id == None):
-    raise Exception("No pb_cycle_id was given")
-
-  client = GraphqlClient(endpoint=gql_endpoint)
-
-  query = ''' 
-    mutation CreatePhase($pbCycleId: ID!, $name: PhasesEnum!, $startAt: ISO8601DateTime!, $endAt: ISO8601DateTime ){
-      createPhase(input: {
-        pbCycleId: $pbCycleId,
-        name: $name,
-        startAt: $startAt,
-        endAt: $endAt
-      }) {
-        pbCycleId
-        phaseId
-      }
-    }
-  '''  
-  variables = {"pbCycleId": pb_cycle_id, "name": name, "startAt": from_date.isoformat(), "endAt": to_date.isoformat()}
-  headers = {"Authorization":"Bearer "+admin_user_token}
-  data = client.execute(query=query, variables=variables, headers=headers)
-  #print(data)
-  return data
-
-```
-
-### createPbCycle
-
-By using this mutation a valid object is created; Which can later be edited.
-
-```python
-from datetime import datetime, timezone, timedelta
-
-def create_pb_cycle(theme, description, budget, startDate=None, endDate):
-  client = GraphqlClient(endpoint=gql_endpoint)
-
-  if (startDate == None):
-    startDate = datetime.now(timezone.utc)
-
-  query = '''
-    mutation($theme: String!, $description: String, $budget: Int!, $startDate: dISO8601DateTime!, $endDate: ISO8601DateTime!){
-        createPbCycle(input: {
-            theme: $theme,
-            description: $description,
-            budget: $budget,
-            startDate: $startDate,
-            endDate: $endDate,
-        }){
-            pbCycleId
-        }
-      }'''
-  variables = {"theme": theme, "description": description, "budget": budget, "startDate": startDate.isoformat(), "endDate": endDate.isoformat()}
-  headers = {"Authorization":"Bearer "+ admin_user_token}
-  data = client.execute(query=query, variables=variables, headers=headers)
-  #print(data)
-  return data
-```
-
+## Ideation Phase
 ### Proposals
 
 A Proposal object is an entity that represents a specific idea of a participant which is categorized within a PBCycle.
 
-Using the `createProposal` a participant can submmit a proposal within a category, which can later if selcted be voted on during the voting phase.
-If the category doesn't existes use the `createCategory` mutation.
+Using `createProposal` a participant can submit a proposal within a category, which can later, if selcted, be voted.
+With this muation a valid proposal object is created, which contains at least a name, a cost and a category.
 
+Participants can `reactToProposal`, through a like. The Proposals with a lot of likes will most likely end up on the voting ballot. This reaction can be reversed with the `removeReactionFromProposal`.
 
+## Refinement Phase
 ### Ballots
 
-PB cycle participants vote on eligible proposals contained on a Ballot. A Ballot is the collection of Proposals that are ready for voting. A BallotSubmission is the 'vote' of a Party. 
+A **Ballot** is the collection of Proposals that are ready for voting. The Ballot is prepared by an admin during the refinement phase using the `createBallot` mutation.
 
-The Ballot is prepared during the refinement Phase. All Proposals on the Ballot must have at least a name, a cost and a category. Once voting begins the proposals on the ballot, the ballot itself, and the PB Cycle budget cannot be edited anymore.
+A **BallotSubmission** object is the 'vote' of a Party. Each proposal in the ballot for a party is initialized to an unfunded and ‘no preference’ value. 
+A **VotingGroup** and a **Person** are both PartyTyes that can create a BallotSubmission with the `submitPartyBallotVote` mutation.
+
+
+## Voting Phase
+
+The default voting process is simultaneous individual and collaborative voting. When voting begins, participants can vote individually and also participate in the collaborative vote.
+
+PB cycle participants vote on eligible proposals contained on a Ballot by deciding to fund them through the `fundBallotProposal` mutation. Additionally they can add a reaction using the `reactToPartyBallotProposal` mutation.
