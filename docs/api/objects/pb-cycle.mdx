@@ -1,0 +1,67 @@
+---
+id: pb-cycle
+title: PBCycle
+---
+
+export const Tag = ({children, color}) => (
+<span
+style={{
+      backgroundColor: color,
+      borderRadius: '2px',
+      color: '#fff',
+      padding: '0.2rem',
+    }}>
+{children}
+</span>
+);
+
+No description
+
+```graphql
+type PBCycle {
+  budget: Int
+  createdAt: ISO8601DateTime!
+  currentPhase: Phase
+  currentRoles: [Role!]
+  description: String
+  endDate: ISO8601Date!
+  id: ID!
+  image: String
+  participantsCount: Int
+  remainingDaysLeft: Int
+  startDate: ISO8601Date!
+  theme: String!
+  totalDays: Int
+  updatedAt: ISO8601DateTime!
+}
+```
+
+### Fields
+
+#### `budget` ([`Int`](/docs/api/scalars/int))
+
+#### `createdAt` ([`ISO8601DateTime!`](/docs/api/scalars/iso-8601-date-time))
+
+#### `currentPhase` ([`Phase`](/docs/api/objects/phase))
+
+#### `currentRoles` ([`[Role!]`](/docs/api/objects/role))
+
+#### `description` ([`String`](/docs/api/scalars/string))
+
+#### `endDate` ([`ISO8601Date!`](/docs/api/scalars/iso-8601-date))
+
+#### `id` ([`ID!`](/docs/api/scalars/id))
+
+#### `image` ([`String`](/docs/api/scalars/string))
+
+#### `participantsCount` ([`Int`](/docs/api/scalars/int))
+
+#### `remainingDaysLeft` ([`Int`](/docs/api/scalars/int))
+
+#### `startDate` ([`ISO8601Date!`](/docs/api/scalars/iso-8601-date))
+
+#### `theme` ([`String!`](/docs/api/scalars/string))
+
+#### `totalDays` ([`Int`](/docs/api/scalars/int))
+
+#### `updatedAt` ([`ISO8601DateTime!`](/docs/api/scalars/iso-8601-date-time))

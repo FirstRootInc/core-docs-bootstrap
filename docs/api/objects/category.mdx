@@ -1,0 +1,94 @@
+---
+id: category
+title: Category
+---
+
+export const Tag = ({children, color}) => (
+<span
+style={{
+      backgroundColor: color,
+      borderRadius: '2px',
+      color: '#fff',
+      padding: '0.2rem',
+    }}>
+{children}
+</span>
+);
+
+No description
+
+```graphql
+type Category {
+  color: String
+  createdAt: ISO8601DateTime!
+  hexColor: String
+  icon: String
+  id: ID!
+  proposals(pbCycleId: ID = 0): [Proposal!]
+  rgbColor: [Int!]
+  title: String
+  updatedAt: ISO8601DateTime!
+}
+```
+
+### Fields
+
+#### `color` ([`String`](/docs/api/scalars/string))
+
+The color assigned to the category. This color can be used by clients to customize the presentation of the category, for instance, to change the background color, title color, etc.
+
+The returned value is formatted as web hex color (e.g. `#FFFFFF`).
+
+**Access level:** `public`.  
+**Returns:** `String` | `null`.
+
+#### `createdAt` ([`ISO8601DateTime!`](/docs/api/scalars/iso-8601-date-time))
+
+#### `hexColor` ([`String`](/docs/api/scalars/string))
+
+The color assigned to the category. This color can be used by clients to customize the presentation of the category, for instance, to change the background color, title color, etc.
+
+The returned value is formatted as an hex string (e.g. `0x75dddd`).
+
+**Access level:** `public`.  
+**Returns:** `String` | `null`.
+
+#### `icon` ([`String`](/docs/api/scalars/string))
+
+The emoji icon assigned to the category.
+
+**Access level:** `public`.  
+**Returns:** `String` | `null`.
+
+#### `id` ([`ID!`](/docs/api/scalars/id))
+
+The category `UUID` identifier in the system.
+
+**Access level:** `public`.
+
+#### `proposals` ([`[Proposal!]`](/docs/api/objects/proposal))
+
+All proposals assigned to this category. More information about this field can be found in the description of `ProposalType`. Access to this field requires a logged in user, anonymous requests will always return `null`.
+
+**Access level:** `public`.  
+**Returns:** `ProposalType` | `null`.
+
+- ##### `pbCycleId` ([`ID`](/docs/api/scalars/id))
+
+#### `rgbColor` ([`[Int!]`](/docs/api/scalars/int))
+
+The color assigned to the category. This color can be used by clients to customize the presentation of the category, for instance, to change the background color, title color, etc.
+
+The returned value is formatted as an array of integers where every index represents a color code for [`red`, `green`, `blue`] respectively.
+
+**Access level:** `public`.  
+**Returns:** `[red, green, blue]` | `null`.
+
+#### `title` ([`String`](/docs/api/scalars/string))
+
+The category title provided by participant.
+
+**Access level:** `public`.  
+**Returns:** `String` | `null`.
+
+#### `updatedAt` ([`ISO8601DateTime!`](/docs/api/scalars/iso-8601-date-time))

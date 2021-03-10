@@ -1,0 +1,33 @@
+---
+id: current-phase
+title: currentPhase
+---
+
+export const Tag = ({children, color}) => (
+<span
+style={{
+      backgroundColor: color,
+      borderRadius: '2px',
+      color: '#fff',
+      padding: '0.2rem',
+    }}>
+{children}
+</span>
+);
+
+Find the current active phase of a PB Cycle
+
+```graphql
+currentPhase(
+  pbCycleId: ID!
+): Phase
+
+```
+
+### Arguments
+
+#### `pbCycleId` ([`ID!`](/docs/api/scalars/id))
+
+### Type
+
+#### [`Phase`](/docs/api/objects/phase)

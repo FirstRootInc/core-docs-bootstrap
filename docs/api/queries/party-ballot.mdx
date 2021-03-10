@@ -1,0 +1,33 @@
+---
+id: party-ballot
+title: partyBallot
+---
+
+export const Tag = ({children, color}) => (
+<span
+style={{
+      backgroundColor: color,
+      borderRadius: '2px',
+      color: '#fff',
+      padding: '0.2rem',
+    }}>
+{children}
+</span>
+);
+
+Retrieves the party ballot inside a PB Cycle
+
+```graphql
+partyBallot(
+  pbCycleId: ID!
+): PartyBallot!
+
+```
+
+### Arguments
+
+#### `pbCycleId` ([`ID!`](/docs/api/scalars/id))
+
+### Type
+
+#### [`PartyBallot`](/docs/api/objects/party-ballot)

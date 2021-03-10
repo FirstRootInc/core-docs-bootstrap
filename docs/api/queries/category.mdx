@@ -1,0 +1,35 @@
+---
+id: category
+title: category
+---
+
+export const Tag = ({children, color}) => (
+<span
+style={{
+      backgroundColor: color,
+      borderRadius: '2px',
+      color: '#fff',
+      padding: '0.2rem',
+    }}>
+{children}
+</span>
+);
+
+Find a category by UUID
+
+```graphql
+category(
+  id: ID!
+): Category!
+
+```
+
+### Arguments
+
+#### `id` ([`ID!`](/docs/api/scalars/id))
+
+Category UUID
+
+### Type
+
+#### [`Category`](/docs/api/objects/category)

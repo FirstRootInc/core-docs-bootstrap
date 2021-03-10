@@ -17,19 +17,18 @@ module.exports = {
       },
       items: [
         {
-          to: '/',
-          activeBasePath: 'docs',
-          label: 'Docs',
-          position: 'left',
+          to: "/", // adjust the location depending on your baseURL (see configuration)
+          label: "Introduction", // change the label with yours
+          position: "left",
         },
         {
-          href: 'https://github.com/facebook/docusaurus',
-          label: 'GitHub',
-          position: 'right',
+          to: "/pbcycle", // adjust the location depending on your baseURL (see configuration)
+          label: "Core Concepts", // change the label with yours
+          position: "left",
         },
         {
-          to: "/firstroot", // adjust the location depending on your baseURL (see configuration)
-          label: "Firstroot Schema", // change the label with yours
+          to: "/explorer-guide", // adjust the location depending on your baseURL (see configuration)
+          label: "Tools", // change the label with yours
           position: "left",
         },
       ],
@@ -95,12 +94,6 @@ module.exports = {
           editUrl:
             'https://github.com/facebook/docusaurus/edit/master/website/',
         },
-        blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          editUrl:
-            'https://github.com/facebook/docusaurus/edit/master/website/blog/',
-        },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
@@ -109,13 +102,13 @@ module.exports = {
   ],
   plugins: [
     [
-      '@edno/docusaurus2-graphql-doc-generator',
+      "@edno/docusaurus2-graphql-doc-generator",
       {
-        schema: "http://api-staging.firstroot.co/graphiql",
+        schema: "https://api-dev.firstroot.co/app/graphql",
         rootPath: "./docs",
-        baseURL: "firstroot",
-        homepage: "./docs/firstroot.md",
-      }
+        linkRoot: "/docs/",
+        baseURL: "api",
+      },
     ],
   ]
 };

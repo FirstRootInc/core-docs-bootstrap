@@ -1,0 +1,22 @@
+---
+id: email
+title: Email
+---
+
+export const Tag = ({children, color}) => (
+<span
+style={{
+      backgroundColor: color,
+      borderRadius: '2px',
+      color: '#fff',
+      padding: '0.2rem',
+    }}>
+{children}
+</span>
+);
+
+Scalar used to receive and process and email. Allows to perform different operations over an email, like trim and lowercasing.
+
+```graphql
+scalar Email
+```

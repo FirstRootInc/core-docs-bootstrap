@@ -1,0 +1,40 @@
+---
+id: pb-invitation-info
+title: PBInvitationInfo
+---
+
+export const Tag = ({children, color}) => (
+<span
+style={{
+      backgroundColor: color,
+      borderRadius: '2px',
+      color: '#fff',
+      padding: '0.2rem',
+    }}>
+{children}
+</span>
+);
+
+No description
+
+```graphql
+type PBInvitationInfo {
+  acceptedInvitations: PBAcceptedInvitationsStatistics
+  invitationsTokens: [VerificationToken!]!
+  pbCycle: PBCycle!
+}
+```
+
+### Fields
+
+#### `acceptedInvitations` ([`PBAcceptedInvitationsStatistics`](/docs/api/objects/pb-accepted-invitations-statistics))
+
+Information about users that has been accepted the invitation
+
+#### `invitationsTokens` ([`[VerificationToken!]!`](/docs/api/objects/verification-token))
+
+Information about the invitations tokens.
+
+#### `pbCycle` ([`PBCycle!`](/docs/api/objects/pb-cycle))
+
+PB Cycle information

@@ -1,0 +1,45 @@
+---
+id: ballot-proposal
+title: BallotProposal
+---
+
+export const Tag = ({children, color}) => (
+<span
+style={{
+      backgroundColor: color,
+      borderRadius: '2px',
+      color: '#fff',
+      padding: '0.2rem',
+    }}>
+{children}
+</span>
+);
+
+No description
+
+```graphql
+type BallotProposal {
+  cost: Decimal!
+  createdAt: ISO8601Date!
+  id: ID!
+  proposal: Proposal
+  reactions: Reactions
+  updatedAt: ISO8601Date!
+}
+```
+
+### Fields
+
+#### `cost` ([`Decimal!`](/docs/api/scalars/decimal))
+
+#### `createdAt` ([`ISO8601Date!`](/docs/api/scalars/iso-8601-date))
+
+#### `id` ([`ID!`](/docs/api/scalars/id))
+
+#### `proposal` ([`Proposal`](/docs/api/objects/proposal))
+
+#### `reactions` ([`Reactions`](/docs/api/objects/reactions))
+
+Total of every single reaction type the ballot proposal has received
+
+#### `updatedAt` ([`ISO8601Date!`](/docs/api/scalars/iso-8601-date))

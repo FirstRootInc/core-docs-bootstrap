@@ -1,0 +1,35 @@
+---
+id: pb-cycle-invitation
+title: pbCycleInvitation
+---
+
+export const Tag = ({children, color}) => (
+<span
+style={{
+      backgroundColor: color,
+      borderRadius: '2px',
+      color: '#fff',
+      padding: '0.2rem',
+    }}>
+{children}
+</span>
+);
+
+Retrieves information about a PB Cycle invitation including total users have accepted and users with a registered account
+
+```graphql
+pbCycleInvitation(
+  pbCycleId: ID!
+): PBInvitationInfo!
+
+```
+
+### Arguments
+
+#### `pbCycleId` ([`ID!`](/docs/api/scalars/id))
+
+PB Cycle ID
+
+### Type
+
+#### [`PBInvitationInfo`](/docs/api/objects/pb-invitation-info)

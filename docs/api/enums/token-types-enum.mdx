@@ -1,0 +1,34 @@
+---
+id: token-types-enum
+title: TokenTypesEnum
+---
+
+export const Tag = ({children, color}) => (
+<span
+style={{
+      backgroundColor: color,
+      borderRadius: '2px',
+      color: '#fff',
+      padding: '0.2rem',
+    }}>
+{children}
+</span>
+);
+
+No description
+
+```graphql
+enum TokenTypesEnum {
+  PARTICIPANT_INVITATION
+  ADMIN_INVITATION
+  ACCEPTED_INVITATION
+}
+```
+
+### Values
+
+#### `PARTICIPANT_INVITATION`
+
+#### `ADMIN_INVITATION`
+
+#### `ACCEPTED_INVITATION`

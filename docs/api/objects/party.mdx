@@ -1,0 +1,46 @@
+---
+id: party
+title: Party
+---
+
+export const Tag = ({children, color}) => (
+<span
+style={{
+      backgroundColor: color,
+      borderRadius: '2px',
+      color: '#fff',
+      padding: '0.2rem',
+    }}>
+{children}
+</span>
+);
+
+No description
+
+```graphql
+type Party {
+  createdAt: ISO8601DateTime!
+  details: JSON
+  id: ID!
+  relationships: [String!]
+  type: String
+  updatedAt: ISO8601DateTime!
+  user: User
+}
+```
+
+### Fields
+
+#### `createdAt` ([`ISO8601DateTime!`](/docs/api/scalars/iso-8601-date-time))
+
+#### `details` ([`JSON`](/docs/api/scalars/json))
+
+#### `id` ([`ID!`](/docs/api/scalars/id))
+
+#### `relationships` ([`[String!]`](/docs/api/scalars/string))
+
+#### `type` ([`String`](/docs/api/scalars/string))
+
+#### `updatedAt` ([`ISO8601DateTime!`](/docs/api/scalars/iso-8601-date-time))
+
+#### `user` ([`User`](/docs/api/objects/user))

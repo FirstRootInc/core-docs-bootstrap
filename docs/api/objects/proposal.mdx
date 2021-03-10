@@ -1,0 +1,169 @@
+---
+id: proposal
+title: Proposal
+---
+
+export const Tag = ({children, color}) => (
+<span
+style={{
+      backgroundColor: color,
+      borderRadius: '2px',
+      color: '#fff',
+      padding: '0.2rem',
+    }}>
+{children}
+</span>
+);
+
+The proposal type is a widely used type in Firstroot GraphQL implementation and it is included in several queries and mutations.
+
+**Access level:** `public`.
+
+_**Note**: anonymous access to some fields is restricted._
+
+```graphql
+type Proposal {
+  alreadyReacted: Boolean
+  category: Category
+  categoryId: String
+  cost: Decimal
+  createdAt: ISO8601DateTime!
+  description: String
+  id: ID!
+  isOwner: Boolean
+  name: String
+  pbCycle: PBCycle
+  reactions: Reactions
+  registeredReactions: [String!]!
+  thumbnail: String
+  totalReactions: Int!
+  updatedAt: ISO8601DateTime!
+  user: User
+  userId: String
+  videoUrl: VideoUrl
+}
+```
+
+### Fields
+
+#### `alreadyReacted` ([`Boolean`](/docs/api/scalars/boolean))
+
+Indicates the current user has reacted to the proposal, does not matter the type of reaction. Access to this field requires a logged in user, anonymous requests will always return `null`.
+
+**Access level:** `participant`, `PB admin`.  
+**Returns**: `Int` | `null`
+
+#### `category` ([`Category`](/docs/api/objects/category))
+
+Category object which this item belongs to.
+
+Through this type client can access al fields available in a Category including `name`, `icon` and others.
+
+**Access level:** `public`.
+
+#### `categoryId` ([`String`](/docs/api/scalars/string))
+
+The category `UUID` which the proposal belongs to.
+
+**Access level:** `public`.
+
+#### `cost` ([`Decimal`](/docs/api/scalars/decimal))
+
+The estimated cost for the proposal implementation.
+
+**Access level:** `public`.  
+**Returns**: `Decimal` | `null`
+
+#### `createdAt` ([`ISO8601DateTime!`](/docs/api/scalars/iso-8601-date-time))
+
+#### `description` ([`String`](/docs/api/scalars/string))
+
+A description of the proposal generated and refined by the PB Cycle participants.
+
+**Access level:** `public`.
+
+#### `id` ([`ID!`](/docs/api/scalars/id))
+
+The proposal `UUID` identifier in the system.
+
+**Access level:** `public`.
+
+#### `isOwner` ([`Boolean`](/docs/api/scalars/boolean))
+
+Indicates if current user is the proposal's creator. Access to this field requires a logged in user, anonymous requests will always return **`false`**.
+
+**Access level:** `public`, `PB admin`.
+
+#### `name` ([`String`](/docs/api/scalars/string))
+
+The proposal name provided by participant.
+
+**Access level:** `public`.
+
+#### `pbCycle` ([`PBCycle`](/docs/api/objects/pb-cycle))
+
+PB Cycle object which this proposal belongs to. Every single proposal must belong yo a PB Cycle, this field provides access to those `PBCycle` type fields.
+
+**Access level:** `public`
+
+_**Note:** some fields may not be available for anonymous users._
+
+#### `reactions` ([`Reactions`](/docs/api/objects/reactions))
+
+The totals per reaction type received by proposal.
+
+**Access level:** `participant`, `PB admin`.
+
+#### `registeredReactions` ([`[String!]!`](/docs/api/scalars/string))
+
+Return the list of reactions this proposal received. Reactions are returned as an array in which every index correspond to a type of reaction the proposal has received.
+
+**Access level:** `public`.  
+**Returns**: `[String]` | `null`
+
+---
+
+**Examples:**
+
+| Returned              | Explanation                                                                                            |
+| :-------------------- | :----------------------------------------------------------------------------------------------------- |
+| `['LIKE', 'NEUTRAL']` | Proposal has only received reactions of type `LIKE` and `NEUTRAL`, but no reactions of type `DISLIKE`. |
+| `[]`                  | Proposal has not received any reaction yet.                                                            |
+
+#### `thumbnail` ([`String`](/docs/api/scalars/string))
+
+The image assigned to proposal. All images are moderated using Amazon Rekognition before to accept then and before to be publicly available. The content of this field depends on the approval of provided image.
+
+This value will be `null` if the client did not upload and image for proposal or if the uploaded image is under approval process. Once the image is approved or rejected by system this value will be automatically fulfilled with the URL of uploaded image if it was approved, or with [**this URL**](https://core-dev-proposal-images.s3.us-east-2.amazonaws.com/flagged-image.png) if image was rejected.
+
+Rejection of an image depends on its content. Rekognition search for inappropriate content like nudity, gambling, violence and other not allowed content in the image.
+
+**Returns:** `null` | `URL`
+
+#### `totalReactions` ([`Int!`](/docs/api/scalars/int))
+
+The SUM of all reactions this proposal has received. This value includes all types of reactions.
+
+**Access level:** `public`.
+
+#### `updatedAt` ([`ISO8601DateTime!`](/docs/api/scalars/iso-8601-date-time))
+
+#### `user` ([`User`](/docs/api/objects/user))
+
+User object who created this proposal. This field provide access to all `User` type available fields.
+
+This field is available only for participants or admin in the PB Cycle, for anonymous requests the field will be always `null`.
+
+**Access level:** `participant`, `PB admin`.  
+**Returns**: `UserType` | `null`
+
+#### `userId` ([`String`](/docs/api/scalars/string))
+
+The user `UUID`, creator of the proposal. This fields is available only for logged in users, other case will always return `null`
+
+**Access level:** `participant`, `PB admin`.  
+**Returns**: `UUID` | `null`
+
+#### `videoUrl` ([`VideoUrl`](/docs/api/scalars/video-url))
+
+The video URL if it was provided by participant. This URL will point to a YouTube video URL.

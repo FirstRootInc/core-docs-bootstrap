@@ -1,0 +1,22 @@
+---
+id: decimal
+title: Decimal
+---
+
+export const Tag = ({children, color}) => (
+<span
+style={{
+      backgroundColor: color,
+      borderRadius: '2px',
+      color: '#fff',
+      padding: '0.2rem',
+    }}>
+{children}
+</span>
+);
+
+Decimal scalar accepts number with the format `0.00` and returns values in the same format but as a `String`, for instance `"50.00"`.
+
+```graphql
+scalar Decimal
+```

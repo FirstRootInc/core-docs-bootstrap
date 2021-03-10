@@ -1,0 +1,55 @@
+---
+id: party-ballot-proposal
+title: PartyBallotProposal
+---
+
+export const Tag = ({children, color}) => (
+<span
+style={{
+      backgroundColor: color,
+      borderRadius: '2px',
+      color: '#fff',
+      padding: '0.2rem',
+    }}>
+{children}
+</span>
+);
+
+No description
+
+```graphql
+type PartyBallotProposal {
+  cost: Decimal!
+  createdAt: ISO8601Date!
+  fundedAt: ISO8601Date
+  id: ID!
+  isFunded: Boolean
+  listOrder: Int!
+  partyBallot: PartyBallot!
+  proposal: Proposal!
+  reaction: String
+  updatedAt: ISO8601Date!
+}
+```
+
+### Fields
+
+#### `cost` ([`Decimal!`](/docs/api/scalars/decimal))
+
+#### `createdAt` ([`ISO8601Date!`](/docs/api/scalars/iso-8601-date))
+
+#### `fundedAt` ([`ISO8601Date`](/docs/api/scalars/iso-8601-date))
+
+#### `id` ([`ID!`](/docs/api/scalars/id))
+
+#### `isFunded` ([`Boolean`](/docs/api/scalars/boolean))
+
+#### `listOrder` ([`Int!`](/docs/api/scalars/int))
+
+#### `partyBallot` ([`PartyBallot!`](/docs/api/objects/party-ballot))
+
+#### `proposal` ([`Proposal!`](/docs/api/objects/proposal))
+
+#### `reaction` ([`String`](/docs/api/scalars/string))
+
+#### `updatedAt` ([`ISO8601Date!`](/docs/api/scalars/iso-8601-date))

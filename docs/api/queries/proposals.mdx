@@ -1,0 +1,43 @@
+---
+id: proposals
+title: proposals
+---
+
+export const Tag = ({children, color}) => (
+<span
+style={{
+      backgroundColor: color,
+      borderRadius: '2px',
+      color: '#fff',
+      padding: '0.2rem',
+    }}>
+{children}
+</span>
+);
+
+Retrieves an array of all proposals included in a PB Cycle. Take into account this query will only return proposals with which have a name, this means other proposals withouth name can exists but they are not available through this query.
+
+If you need to present all proposals, even those that don't have a name, for instance, to present all proposals belonging to a specific participant use **`myProposals`** query instead.
+
+```graphql
+proposals(
+  pbCycleId: ID!
+): [Proposal!]!
+
+```
+
+### Arguments
+
+#### `pbCycleId` ([`ID!`](/docs/api/scalars/id))
+
+The PB Cycle `UUID`
+
+### Type
+
+#### [`Proposal`](/docs/api/objects/proposal)
+
+The proposal type is a widely used type in Firstroot GraphQL implementation and it is included in several queries and mutations.
+
+**Access level:** `public`.
+
+_**Note**: anonymous access to some fields is restricted._

@@ -1,0 +1,50 @@
+---
+id: results-statistics
+title: ResultsStatistics
+---
+
+export const Tag = ({children, color}) => (
+<span
+style={{
+      backgroundColor: color,
+      borderRadius: '2px',
+      color: '#fff',
+      padding: '0.2rem',
+    }}>
+{children}
+</span>
+);
+
+No description
+
+```graphql
+type ResultsStatistics {
+  dislikesCount: Int!
+  fundsCount: Int!
+  likesCount: Int!
+  neutralCount: Int!
+  participantsCount: Int!
+}
+```
+
+### Fields
+
+#### `dislikesCount` ([`Int!`](/docs/api/scalars/int))
+
+The total number of dislikes received by proposals in this PB Cycle
+
+#### `fundsCount` ([`Int!`](/docs/api/scalars/int))
+
+The total number of votes for funding made in this PB Cycle
+
+#### `likesCount` ([`Int!`](/docs/api/scalars/int))
+
+The total number of likes received by proposals in this PB Cycle
+
+#### `neutralCount` ([`Int!`](/docs/api/scalars/int))
+
+The total number of neutral reactions received by proposals in this PB Cycle
+
+#### `participantsCount` ([`Int!`](/docs/api/scalars/int))
+
+The total number of participants in this PB Cycle

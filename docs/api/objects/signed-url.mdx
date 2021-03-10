@@ -1,0 +1,58 @@
+---
+id: signed-url
+title: SignedUrl
+---
+
+export const Tag = ({children, color}) => (
+<span
+style={{
+      backgroundColor: color,
+      borderRadius: '2px',
+      color: '#fff',
+      padding: '0.2rem',
+    }}>
+{children}
+</span>
+);
+
+No description
+
+```graphql
+type SignedUrl {
+  filename: String!
+  id: String!
+  objectAssigned: String!
+  objectType: String!
+  presignedUrl: String!
+  url: String!
+}
+```
+
+### Fields
+
+#### `filename` ([`String!`](/docs/api/scalars/string))
+
+The filename created by server
+
+#### `id` ([`String!`](/docs/api/scalars/string))
+
+The id assigned to this uploaded file
+
+#### `objectAssigned` ([`String!`](/docs/api/scalars/string))
+
+The object id which this file was assigned to
+
+#### `objectType` ([`String!`](/docs/api/scalars/string))
+
+The object type which this file was assigned to
+
+#### `presignedUrl` ([`String!`](/docs/api/scalars/string))
+
+Signed URL returned by S3. It must be used to upload the new file
+
+#### `url` ([`String!`](/docs/api/scalars/string))
+
+The public URL for file. This field represents the final URL where the
+file will be stored. Note that when the presigned URL is requested, this
+URL is not available. This becomes automatically available after we verify
+that file is acceptable according our rules.

@@ -1,0 +1,40 @@
+---
+id: ballot
+title: ballot
+---
+
+export const Tag = ({children, color}) => (
+<span
+style={{
+      backgroundColor: color,
+      borderRadius: '2px',
+      color: '#fff',
+      padding: '0.2rem',
+    }}>
+{children}
+</span>
+);
+
+Query to retrieve a ballot infomration. Notice that you must provide at least one argument `pbCycleId` or `ballotId`. Consider `ballotId` has precedence over `partyBallotId`.
+
+```graphql
+ballot(
+  pbCycleId: String
+  ballotId: String
+): Ballot!
+
+```
+
+### Arguments
+
+#### `pbCycleId` ([`String`](/docs/api/scalars/string))
+
+The PB cycle ID which the ballot belongs to. If a `ballotId` is provided then this value will be ignored.
+
+#### `ballotId` ([`String`](/docs/api/scalars/string))
+
+The specific ballot ID to retrieve its information. When it is provided the `pbCycleId` field is ignored.
+
+### Type
+
+#### [`Ballot`](/docs/api/objects/ballot)

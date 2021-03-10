@@ -1,0 +1,39 @@
+---
+id: my-proposals
+title: myProposals
+---
+
+export const Tag = ({children, color}) => (
+<span
+style={{
+      backgroundColor: color,
+      borderRadius: '2px',
+      color: '#fff',
+      padding: '0.2rem',
+    }}>
+{children}
+</span>
+);
+
+Find proposals that belong to a user
+
+```graphql
+myProposals(
+  pbCycleId: ID = 0
+): [Proposal!]
+
+```
+
+### Arguments
+
+#### `pbCycleId` ([`ID`](/docs/api/scalars/id))
+
+### Type
+
+#### [`Proposal`](/docs/api/objects/proposal)
+
+The proposal type is a widely used type in Firstroot GraphQL implementation and it is included in several queries and mutations.
+
+**Access level:** `public`.
+
+_**Note**: anonymous access to some fields is restricted._

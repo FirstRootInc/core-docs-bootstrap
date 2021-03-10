@@ -1,0 +1,33 @@
+---
+id: user
+title: user
+---
+
+export const Tag = ({children, color}) => (
+<span
+style={{
+      backgroundColor: color,
+      borderRadius: '2px',
+      color: '#fff',
+      padding: '0.2rem',
+    }}>
+{children}
+</span>
+);
+
+Find a user by UUID
+
+```graphql
+user(
+  id: ID!
+): User!
+
+```
+
+### Arguments
+
+#### `id` ([`ID!`](/docs/api/scalars/id))
+
+### Type
+
+#### [`User`](/docs/api/objects/user)

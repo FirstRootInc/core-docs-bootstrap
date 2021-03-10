@@ -1,0 +1,59 @@
+---
+id: pb-accepted-invitation
+title: PBAcceptedInvitation
+---
+
+export const Tag = ({children, color}) => (
+<span
+style={{
+      backgroundColor: color,
+      borderRadius: '2px',
+      color: '#fff',
+      padding: '0.2rem',
+    }}>
+{children}
+</span>
+);
+
+No description
+
+```graphql
+type PBAcceptedInvitation {
+  createdAt: ISO8601DateTime!
+  email: Email!
+  firstName: String!
+  id: ID!
+  lastName: String!
+  pbCycle: PBCycle!
+  updatedAt: ISO8601DateTime!
+  verifiedAt: ISO8601DateTime
+}
+```
+
+### Fields
+
+#### `createdAt` ([`ISO8601DateTime!`](/docs/api/scalars/iso-8601-date-time))
+
+#### `email` ([`Email!`](/docs/api/scalars/email))
+
+The email registered by user when accepted the invitation.
+
+#### `firstName` ([`String!`](/docs/api/scalars/string))
+
+The first name registered by user when accepted the invitation.
+
+#### `id` ([`ID!`](/docs/api/scalars/id))
+
+#### `lastName` ([`String!`](/docs/api/scalars/string))
+
+The last name registered by user when accepted the invitation
+
+#### `pbCycle` ([`PBCycle!`](/docs/api/objects/pb-cycle))
+
+PB cycle information
+
+#### `updatedAt` ([`ISO8601DateTime!`](/docs/api/scalars/iso-8601-date-time))
+
+#### `verifiedAt` ([`ISO8601DateTime`](/docs/api/scalars/iso-8601-date-time))
+
+Date and time in which invitation was accepted by user.

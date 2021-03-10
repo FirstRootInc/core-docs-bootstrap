@@ -1,0 +1,27 @@
+---
+id: verify-auth-token-status
+title: verifyAuthTokenStatus
+---
+
+export const Tag = ({children, color}) => (
+<span
+style={{
+      backgroundColor: color,
+      borderRadius: '2px',
+      color: '#fff',
+      padding: '0.2rem',
+    }}>
+{children}
+</span>
+);
+
+Checks the validity of authorization token
+
+```graphql
+verifyAuthTokenStatus: TokenStatus!
+
+```
+
+### Type
+
+#### [`TokenStatus`](/docs/api/objects/token-status)

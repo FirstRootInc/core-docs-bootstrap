@@ -1,15 +1,20 @@
 module.exports = {
-  sidebar: {
-    'Overview' : [
+  IntroductionSidebar: {
+    'Get Started' : [
         'introduction',
         'references',
+        'graphql',
     ],
-    'Core Concepts' : [
+    ...require("./docs/api/sidebar-schema"),
+  },
+  CoreConceptSidebar: {
+    'PB Cycle' : [
         'pbcycle',
         'pb-inv',
     ],
-    'Guides' : [
-        'graphql', 
+  },
+  ToolsSidebar: {
+    'Tools' : [
         'explorer-guide',
         'explorer-guide-2',
     ],

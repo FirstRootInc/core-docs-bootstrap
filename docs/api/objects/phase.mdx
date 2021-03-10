@@ -1,0 +1,43 @@
+---
+id: phase
+title: Phase
+---
+
+export const Tag = ({children, color}) => (
+<span
+style={{
+      backgroundColor: color,
+      borderRadius: '2px',
+      color: '#fff',
+      padding: '0.2rem',
+    }}>
+{children}
+</span>
+);
+
+No description
+
+```graphql
+type Phase {
+  endAt: ISO8601DateTime
+  id: ID!
+  name: String!
+  remainingDaysLeft: Int
+  startAt: ISO8601DateTime!
+  totalDays: Int
+}
+```
+
+### Fields
+
+#### `endAt` ([`ISO8601DateTime`](/docs/api/scalars/iso-8601-date-time))
+
+#### `id` ([`ID!`](/docs/api/scalars/id))
+
+#### `name` ([`String!`](/docs/api/scalars/string))
+
+#### `remainingDaysLeft` ([`Int`](/docs/api/scalars/int))
+
+#### `startAt` ([`ISO8601DateTime!`](/docs/api/scalars/iso-8601-date-time))
+
+#### `totalDays` ([`Int`](/docs/api/scalars/int))

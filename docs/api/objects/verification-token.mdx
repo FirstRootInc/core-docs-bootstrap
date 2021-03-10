@@ -1,0 +1,72 @@
+---
+id: verification-token
+title: VerificationToken
+---
+
+export const Tag = ({children, color}) => (
+<span
+style={{
+      backgroundColor: color,
+      borderRadius: '2px',
+      color: '#fff',
+      padding: '0.2rem',
+    }}>
+{children}
+</span>
+);
+
+No description
+
+```graphql
+type VerificationToken {
+  category: String!
+  createdAt: ISO8601DateTime!
+  id: ID!
+  singleUse: Boolean!
+  token: String!
+  updatedAt: ISO8601DateTime!
+  usedAt: ISO8601DateTime
+  validFrom: ISO8601DateTime
+  validUntil: ISO8601DateTime
+  verifiableId: ID!
+  verifiableType: String!
+}
+```
+
+### Fields
+
+#### `category` ([`String!`](/docs/api/scalars/string))
+
+Category for the verification token.
+
+#### `createdAt` ([`ISO8601DateTime!`](/docs/api/scalars/iso-8601-date-time))
+
+#### `id` ([`ID!`](/docs/api/scalars/id))
+
+#### `singleUse` ([`Boolean!`](/docs/api/scalars/boolean))
+
+Indicates if this verification token has been created to be uses only once.
+
+#### `token` ([`String!`](/docs/api/scalars/string))
+
+The code or _token_ that will be used to verify the action.
+
+#### `updatedAt` ([`ISO8601DateTime!`](/docs/api/scalars/iso-8601-date-time))
+
+#### `usedAt` ([`ISO8601DateTime`](/docs/api/scalars/iso-8601-date-time))
+
+#### `validFrom` ([`ISO8601DateTime`](/docs/api/scalars/iso-8601-date-time))
+
+The initial value in which this verification token starts to be valid.
+
+#### `validUntil` ([`ISO8601DateTime`](/docs/api/scalars/iso-8601-date-time))
+
+The final date and time in which this token still be valid.
+
+#### `verifiableId` ([`ID!`](/docs/api/scalars/id))
+
+The related entity ID. This is the entity that uses the token to verify a certain action
+
+#### `verifiableType` ([`String!`](/docs/api/scalars/string))
+
+The related entity type.

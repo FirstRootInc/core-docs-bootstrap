@@ -1,0 +1,33 @@
+---
+id: parties
+title: parties
+---
+
+export const Tag = ({children, color}) => (
+<span
+style={{
+      backgroundColor: color,
+      borderRadius: '2px',
+      color: '#fff',
+      padding: '0.2rem',
+    }}>
+{children}
+</span>
+);
+
+Find parties by type
+
+```graphql
+parties(
+  type: PartyTypesEnum
+): [Party!]!
+
+```
+
+### Arguments
+
+#### `type` ([`PartyTypesEnum`](/docs/api/enums/party-types-enum))
+
+### Type
+
+#### [`Party`](/docs/api/objects/party)

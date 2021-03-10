@@ -1,0 +1,27 @@
+---
+id: my-pb-cycles
+title: myPbCycles
+---
+
+export const Tag = ({children, color}) => (
+<span
+style={{
+      backgroundColor: color,
+      borderRadius: '2px',
+      color: '#fff',
+      padding: '0.2rem',
+    }}>
+{children}
+</span>
+);
+
+Get all the PB Cycles where the current party is participating
+
+```graphql
+myPbCycles: [PBCycle!]
+
+```
+
+### Type
+
+#### [`PBCycle`](/docs/api/objects/pb-cycle)

@@ -1,0 +1,47 @@
+---
+id: signed-proposal-photo-url
+title: signedProposalPhotoUrl
+---
+
+export const Tag = ({children, color}) => (
+<span
+style={{
+      backgroundColor: color,
+      borderRadius: '2px',
+      color: '#fff',
+      padding: '0.2rem',
+    }}>
+{children}
+</span>
+);
+
+Get a signed URL to upload a new photo
+
+```graphql
+signedProposalPhotoUrl(
+  objectId: String
+  imageType: ImageEnumTypes!
+  objectType: ObjectEnumTypes!
+): SignedUrlResponse
+
+```
+
+### Arguments
+
+#### `objectId` ([`String`](/docs/api/scalars/string))
+
+Object uuid. This field is optional and only needed when you want to add a new image
+to an existing object. This ID could correspond to a proposal, comment, PBCycle or
+other type according to object_type field.
+
+#### `imageType` ([`ImageEnumTypes!`](/docs/api/enums/image-enum-types))
+
+Image type to upload. In the future this field can change to cover other scenarios.
+
+#### `objectType` ([`ObjectEnumTypes!`](/docs/api/enums/object-enum-types))
+
+Type of object to which the image will assigned.
+
+### Type
+
+#### [`SignedUrlResponse`](/docs/api/objects/signed-url-response)

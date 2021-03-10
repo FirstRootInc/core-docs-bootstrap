@@ -1,0 +1,35 @@
+---
+id: invitation-token-status
+title: invitationTokenStatus
+---
+
+export const Tag = ({children, color}) => (
+<span
+style={{
+      backgroundColor: color,
+      borderRadius: '2px',
+      color: '#fff',
+      padding: '0.2rem',
+    }}>
+{children}
+</span>
+);
+
+Checks the status of the PB Cycle invitation token
+
+```graphql
+invitationTokenStatus(
+  token: String!
+): VerificationTokenStatus!
+
+```
+
+### Arguments
+
+#### `token` ([`String!`](/docs/api/scalars/string))
+
+The invitation token provided when the invitation was created.
+
+### Type
+
+#### [`VerificationTokenStatus`](/docs/api/objects/verification-token-status)

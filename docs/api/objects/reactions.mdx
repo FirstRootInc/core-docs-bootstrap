@@ -1,0 +1,44 @@
+---
+id: reactions
+title: Reactions
+---
+
+export const Tag = ({children, color}) => (
+<span
+style={{
+      backgroundColor: color,
+      borderRadius: '2px',
+      color: '#fff',
+      padding: '0.2rem',
+    }}>
+{children}
+</span>
+);
+
+The total reactions received by a `Reactionable` object.
+
+This type contains the total number for every single reaction type.
+
+---
+
+**Example:**
+
+| Payload                                | Description                                                                                                                         |
+| :------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------- |
+| `{likes: 10, dislikes: 1, neutral: 3}` | This proposal has received **10** reactions of type `LIKE`, **1** reaction of type `DISLIKE` and **3** reactions of type `NEUTRAL`. |
+
+```graphql
+type Reactions {
+  dislikes: Int!
+  likes: Int!
+  neutral: Int!
+}
+```
+
+### Fields
+
+#### `dislikes` ([`Int!`](/docs/api/scalars/int))
+
+#### `likes` ([`Int!`](/docs/api/scalars/int))
+
+#### `neutral` ([`Int!`](/docs/api/scalars/int))

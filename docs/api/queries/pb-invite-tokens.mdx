@@ -1,0 +1,36 @@
+---
+id: pb-invite-tokens
+title: pbInviteTokens
+---
+
+export const Tag = ({children, color}) => (
+<span
+style={{
+      backgroundColor: color,
+      borderRadius: '2px',
+      color: '#fff',
+      padding: '0.2rem',
+    }}>
+{children}
+</span>
+);
+
+Lists all the PB Invitation tokens
+
+```graphql
+pbInviteTokens(
+  pbCycleId: ID!
+  type: TokenTypesEnum
+): [VerificationToken!]
+
+```
+
+### Arguments
+
+#### `pbCycleId` ([`ID!`](/docs/api/scalars/id))
+
+#### `type` ([`TokenTypesEnum`](/docs/api/enums/token-types-enum))
+
+### Type
+
+#### [`VerificationToken`](/docs/api/objects/verification-token)

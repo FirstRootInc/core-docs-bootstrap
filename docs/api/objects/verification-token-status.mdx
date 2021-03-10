@@ -1,0 +1,37 @@
+---
+id: verification-token-status
+title: VerificationTokenStatus
+---
+
+export const Tag = ({children, color}) => (
+<span
+style={{
+      backgroundColor: color,
+      borderRadius: '2px',
+      color: '#fff',
+      padding: '0.2rem',
+    }}>
+{children}
+</span>
+);
+
+No description
+
+```graphql
+type VerificationTokenStatus {
+  category: TokenTypesEnum
+  email: Email
+  pbCycle: PBCycle
+  status: TokenStatusesEnum!
+}
+```
+
+### Fields
+
+#### `category` ([`TokenTypesEnum`](/docs/api/enums/token-types-enum))
+
+#### `email` ([`Email`](/docs/api/scalars/email))
+
+#### `pbCycle` ([`PBCycle`](/docs/api/objects/pb-cycle))
+
+#### `status` ([`TokenStatusesEnum!`](/docs/api/enums/token-statuses-enum))

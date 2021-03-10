@@ -1,0 +1,27 @@
+---
+id: pb-cycles
+title: pbCycles
+---
+
+export const Tag = ({children, color}) => (
+<span
+style={{
+      backgroundColor: color,
+      borderRadius: '2px',
+      color: '#fff',
+      padding: '0.2rem',
+    }}>
+{children}
+</span>
+);
+
+Get all PB Cycles
+
+```graphql
+pbCycles: [PBCycle!]
+
+```
+
+### Type
+
+#### [`PBCycle`](/docs/api/objects/pb-cycle)

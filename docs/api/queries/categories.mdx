@@ -1,0 +1,33 @@
+---
+id: categories
+title: categories
+---
+
+export const Tag = ({children, color}) => (
+<span
+style={{
+      backgroundColor: color,
+      borderRadius: '2px',
+      color: '#fff',
+      padding: '0.2rem',
+    }}>
+{children}
+</span>
+);
+
+Find all categories
+
+```graphql
+categories(
+  pbCycleId: ID = 0
+): [Category!]
+
+```
+
+### Arguments
+
+#### `pbCycleId` ([`ID`](/docs/api/scalars/id))
+
+### Type
+
+#### [`Category`](/docs/api/objects/category)

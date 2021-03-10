@@ -1,0 +1,37 @@
+---
+id: statistics
+title: Statistics
+---
+
+export const Tag = ({children, color}) => (
+<span
+style={{
+      backgroundColor: color,
+      borderRadius: '2px',
+      color: '#fff',
+      padding: '0.2rem',
+    }}>
+{children}
+</span>
+);
+
+No description
+
+```graphql
+type Statistics {
+  pbCyclesCount: Int!
+  schoolsCount: Int!
+  usersCount: Int!
+  worldBudget: Decimal!
+}
+```
+
+### Fields
+
+#### `pbCyclesCount` ([`Int!`](/docs/api/scalars/int))
+
+#### `schoolsCount` ([`Int!`](/docs/api/scalars/int))
+
+#### `usersCount` ([`Int!`](/docs/api/scalars/int))
+
+#### `worldBudget` ([`Decimal!`](/docs/api/scalars/decimal))

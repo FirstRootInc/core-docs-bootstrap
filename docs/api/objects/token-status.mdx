@@ -1,0 +1,31 @@
+---
+id: token-status
+title: TokenStatus
+---
+
+export const Tag = ({children, color}) => (
+<span
+style={{
+      backgroundColor: color,
+      borderRadius: '2px',
+      color: '#fff',
+      padding: '0.2rem',
+    }}>
+{children}
+</span>
+);
+
+No description
+
+```graphql
+type TokenStatus {
+  tokenExpiration: String
+  valid: Boolean!
+}
+```
+
+### Fields
+
+#### `tokenExpiration` ([`String`](/docs/api/scalars/string))
+
+#### `valid` ([`Boolean!`](/docs/api/scalars/boolean))

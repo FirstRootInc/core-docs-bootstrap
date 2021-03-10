@@ -1,0 +1,33 @@
+---
+id: party
+title: party
+---
+
+export const Tag = ({children, color}) => (
+<span
+style={{
+      backgroundColor: color,
+      borderRadius: '2px',
+      color: '#fff',
+      padding: '0.2rem',
+    }}>
+{children}
+</span>
+);
+
+Find a party by UUID
+
+```graphql
+party(
+  id: ID!
+): Party
+
+```
+
+### Arguments
+
+#### `id` ([`ID!`](/docs/api/scalars/id))
+
+### Type
+
+#### [`Party`](/docs/api/objects/party)

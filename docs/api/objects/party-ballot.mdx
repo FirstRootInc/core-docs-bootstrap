@@ -1,0 +1,58 @@
+---
+id: party-ballot
+title: PartyBallot
+---
+
+export const Tag = ({children, color}) => (
+<span
+style={{
+      backgroundColor: color,
+      borderRadius: '2px',
+      color: '#fff',
+      padding: '0.2rem',
+    }}>
+{children}
+</span>
+);
+
+No description
+
+```graphql
+type PartyBallot {
+  ballot: Ballot!
+  ballotBudget: Decimal!
+  ballotProposals: [PartyBallotProposal!]!
+  createdAt: ISO8601Date!
+  firstSubmittedAt: ISO8601Date
+  id: ID!
+  isSubmitted: Boolean
+  lastSubmittedAt: ISO8601Date
+  party: Party!
+  remainingBudget: Decimal!
+  updatedAt: ISO8601Date!
+}
+```
+
+### Fields
+
+#### `ballot` ([`Ballot!`](/docs/api/objects/ballot))
+
+#### `ballotBudget` ([`Decimal!`](/docs/api/scalars/decimal))
+
+#### `ballotProposals` ([`[PartyBallotProposal!]!`](/docs/api/objects/party-ballot-proposal))
+
+#### `createdAt` ([`ISO8601Date!`](/docs/api/scalars/iso-8601-date))
+
+#### `firstSubmittedAt` ([`ISO8601Date`](/docs/api/scalars/iso-8601-date))
+
+#### `id` ([`ID!`](/docs/api/scalars/id))
+
+#### `isSubmitted` ([`Boolean`](/docs/api/scalars/boolean))
+
+#### `lastSubmittedAt` ([`ISO8601Date`](/docs/api/scalars/iso-8601-date))
+
+#### `party` ([`Party!`](/docs/api/objects/party))
+
+#### `remainingBudget` ([`Decimal!`](/docs/api/scalars/decimal))
+
+#### `updatedAt` ([`ISO8601Date!`](/docs/api/scalars/iso-8601-date))

@@ -1,0 +1,50 @@
+---
+id: ballot
+title: Ballot
+---
+
+export const Tag = ({children, color}) => (
+<span
+style={{
+      backgroundColor: color,
+      borderRadius: '2px',
+      color: '#fff',
+      padding: '0.2rem',
+    }}>
+{children}
+</span>
+);
+
+No description
+
+```graphql
+type Ballot {
+  budget: Decimal!
+  createdAt: ISO8601Date!
+  id: ID!
+  partyBallots: [PartyBallot!]
+  pbCycle: PBCycle!
+  proposals: [BallotProposal!]
+  updatedAt: ISO8601Date!
+}
+```
+
+### Fields
+
+#### `budget` ([`Decimal!`](/docs/api/scalars/decimal))
+
+#### `createdAt` ([`ISO8601Date!`](/docs/api/scalars/iso-8601-date))
+
+#### `id` ([`ID!`](/docs/api/scalars/id))
+
+#### `partyBallots` ([`[PartyBallot!]`](/docs/api/objects/party-ballot))
+
+#### `pbCycle` ([`PBCycle!`](/docs/api/objects/pb-cycle))
+
+PB Cycle which the ballot belongs to
+
+#### `proposals` ([`[BallotProposal!]`](/docs/api/objects/ballot-proposal))
+
+List of proposals included in this ballot
+
+#### `updatedAt` ([`ISO8601Date!`](/docs/api/scalars/iso-8601-date))
