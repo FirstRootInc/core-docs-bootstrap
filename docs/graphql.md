@@ -1,6 +1,6 @@
 ---
 id: graphql
-title: Ressources
+title: Resources
 ---
 
 Are you new with GraphQL? Here are some useful resources our team recommends:

@@ -30,26 +30,26 @@ type PartyBallotUpdatesResponse {
 
 ### Fields
 
-#### `action` ([`String!`](/docs/api/scalars/string))
+#### `action` ([`String!`](/api/scalars/string))
 
 Indicates the action type performed by the user. Possiblevalues could be: `funding`, `removeFunding`, `react`, `submit`.
 
-#### `isSubmitted` ([`Boolean!`](/docs/api/scalars/boolean))
+#### `isSubmitted` ([`Boolean!`](/api/scalars/boolean))
 
 Determined if party has submitted his ballot or not. If party has submitted his ballot this field will be `true`, otherwise the field will be `false`.
 
-#### `newValue` ([`String`](/docs/api/scalars/string))
+#### `newValue` ([`String`](/api/scalars/string))
 
 The new value after the user action. Possible values are: `null` | `LIKE` | `NEUTRAL` | `DISLIKE` | `true` | `false` depending on action.
 
-#### `partyBallotId` ([`ID!`](/docs/api/scalars/id))
+#### `partyBallotId` ([`ID!`](/api/scalars/id))
 
 Party ballot identifier. Is the same ID used to subscribe.
 
-#### `proposalId` ([`ID`](/docs/api/scalars/id))
+#### `proposalId` ([`ID`](/api/scalars/id))
 
 The party ballot proposal identifier. Notice that a party ballot is conformed by several proposals able to be voted. This field indicates which specific party ballot proposals was updated.
 
-#### `remainingBudget` ([`Decimal!`](/docs/api/scalars/decimal))
+#### `remainingBudget` ([`Decimal!`](/api/scalars/decimal))
 
 The total remaining budget in the party ballot. Every time the party funds or remove funding a proposal the party proposal budget is updated.

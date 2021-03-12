@@ -2,6 +2,7 @@
 id: introduction
 title: Home
 slug: /
+sidebar_label: Get Started
 ---
 
 Welcome to the FirstRoot GraphQL API documentation.

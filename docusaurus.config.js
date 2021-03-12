@@ -17,17 +17,12 @@ module.exports = {
       },
       items: [
         {
-          to: "/", // adjust the location depending on your baseURL (see configuration)
-          label: "Introduction", // change the label with yours
-          position: "left",
-        },
-        {
           to: "/pbcycle", // adjust the location depending on your baseURL (see configuration)
-          label: "Core Concepts", // change the label with yours
+          label: "Concepts", // change the label with yours
           position: "left",
         },
         {
-          to: "/explorer-guide", // adjust the location depending on your baseURL (see configuration)
+          to: "/explorer-guide",
           label: "Tools", // change the label with yours
           position: "left",
         },
@@ -106,7 +101,6 @@ module.exports = {
       {
         schema: "https://api-dev.firstroot.co/app/graphql",
         rootPath: "./docs",
-        linkRoot: "/docs/",
         baseURL: "api",
       },
     ],

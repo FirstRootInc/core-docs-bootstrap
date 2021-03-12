@@ -29,22 +29,22 @@ type BallotResultsUpdatesResponse {
 
 ### Fields
 
-#### `action` ([`String!`](/docs/api/scalars/string))
+#### `action` ([`String!`](/api/scalars/string))
 
 Indicates the action type performed by the admin. Possiblevalues could be: `selected`, `submitted`.
 
-#### `ballotResultsId` ([`ID!`](/docs/api/scalars/id))
+#### `ballotResultsId` ([`ID!`](/api/scalars/id))
 
 The party ballot results ID.
 
-#### `newValue` ([`Boolean`](/docs/api/scalars/boolean))
+#### `newValue` ([`Boolean`](/api/scalars/boolean))
 
 The new value after the user action.
 
-#### `remainingBudget` ([`Decimal!`](/docs/api/scalars/decimal))
+#### `remainingBudget` ([`Decimal!`](/api/scalars/decimal))
 
 The total remaining budget in ballot. Every time the admin select or remove selection from a proposal remaining budget is updated.
 
-#### `resultsProposalId` ([`ID`](/docs/api/scalars/id))
+#### `resultsProposalId` ([`ID`](/api/scalars/id))
 
 The proposal included in the voting results list when admin has performed a selected action over it.
