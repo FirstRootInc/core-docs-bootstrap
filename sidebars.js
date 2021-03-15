@@ -1,6 +1,6 @@
 module.exports = {
   IntroductionSidebar: {
-    'Get Started' : [
+    'Overview' : [
         'introduction',
         'references',
         'graphql',
