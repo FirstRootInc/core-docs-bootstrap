@@ -6,6 +6,35 @@
  */
 
 /* You can override the default Infima variables here. */
+heroBanner {
+  padding: 4rem 0 0 0;
+  text-align: center;
+  position: relative;
+}
+
+@media screen and (max-width: 966px) {
+  .heroBanner {
+    padding: 2rem 2rem 0 2rem;
+  }
+}
+
+.heroLogo {
+  margin-bottom: .5rem;  
+  width: 8rem;
+}
+
+@media screen and (min-width: 689px) {
+  .heroLogo {
+    margin-bottom: -.5rem;
+  }
+}
+
+@media screen and (min-width: 689px) {
+  .heroText {
+    display: inline-block;
+    margin: 1rem 1.5rem 0 2rem;
+  }
+}
 :root {
   --ifm-color-primary: #6cce45;
   --ifm-color-primary-dark: rgb(66, 183, 42);
