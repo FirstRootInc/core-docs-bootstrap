@@ -33,34 +33,34 @@ type CreateProposalInput {
 
 ### Fields
 
-#### `proposalId` ([`ID`](/api/scalars/id))
+#### `proposalId` ([`ID`](/docs/api/scalars/id))
 
-#### `name` ([`String!`](/api/scalars/string))
+#### `name` ([`String!`](/docs/api/scalars/string))
 
 A descriptive name for proposal.
 
-#### `description` ([`String`](/api/scalars/string))
+#### `description` ([`String`](/docs/api/scalars/string))
 
 Full length description for proposal.
 
-#### `cost` ([`Decimal`](/api/scalars/decimal))
+#### `cost` ([`Decimal`](/docs/api/scalars/decimal))
 
 Estimated cost for proposal. This cost is stored as decimal.
 
-#### `thumbnail` ([`String`](/api/scalars/string))
+#### `thumbnail` ([`String`](/docs/api/scalars/string))
 
-#### `category` ([`String!`](/api/scalars/string))
+#### `category` ([`String!`](/docs/api/scalars/string))
 
 The category which this proposal will be assigned to. If no value is provided the server will return an error.
 
-#### `pbCycleId` ([`ID!`](/api/scalars/id))
+#### `pbCycleId` ([`ID!`](/docs/api/scalars/id))
 
 The PB Cycle `UUID` in which this proposal will be created.
 
-#### `videoUrl` ([`VideoUrl`](/api/scalars/video-url))
+#### `videoUrl` ([`VideoUrl`](/docs/api/scalars/video-url))
 
 A video URL for proposal. The provided video must be a **[YouTube](https://youtube.com)** video URL otherwise the server will return an error.
 
-#### `clientMutationId` ([`String`](/api/scalars/string))
+#### `clientMutationId` ([`String`](/docs/api/scalars/string))
 
 A unique identifier for the client performing the mutation.

@@ -96,6 +96,7 @@ module.exports = {
       {
         schema: "https://api-dev.firstroot.co/app/graphql",
         rootPath: "./docs",
+        linkRoot: "/docs/",
         baseURL: "api",
       },
     ],

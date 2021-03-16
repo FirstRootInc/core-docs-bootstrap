@@ -46,14 +46,14 @@ type Proposal {
 
 ### Fields
 
-#### `alreadyReacted` ([`Boolean`](/api/scalars/boolean))
+#### `alreadyReacted` ([`Boolean`](/docs/api/scalars/boolean))
 
 Indicates the current user has reacted to the proposal, does not matter the type of reaction. Access to this field requires a logged in user, anonymous requests will always return `null`.
 
 **Access level:** `participant`, `PB admin`.  
 **Returns**: `Int` | `null`
 
-#### `category` ([`Category`](/api/objects/category))
+#### `category` ([`Category`](/docs/api/objects/category))
 
 Category object which this item belongs to.
 
@@ -61,46 +61,46 @@ Through this type client can access al fields available in a Category including 
 
 **Access level:** `public`.
 
-#### `categoryId` ([`String`](/api/scalars/string))
+#### `categoryId` ([`String`](/docs/api/scalars/string))
 
 The category `UUID` which the proposal belongs to.
 
 **Access level:** `public`.
 
-#### `cost` ([`Decimal`](/api/scalars/decimal))
+#### `cost` ([`Decimal`](/docs/api/scalars/decimal))
 
 The estimated cost for the proposal implementation.
 
 **Access level:** `public`.  
 **Returns**: `Decimal` | `null`
 
-#### `createdAt` ([`ISO8601DateTime!`](/api/scalars/iso-8601-date-time))
+#### `createdAt` ([`ISO8601DateTime!`](/docs/api/scalars/iso-8601-date-time))
 
-#### `description` ([`String`](/api/scalars/string))
+#### `description` ([`String`](/docs/api/scalars/string))
 
 A description of the proposal generated and refined by the PB Cycle participants.
 
 **Access level:** `public`.
 
-#### `id` ([`ID!`](/api/scalars/id))
+#### `id` ([`ID!`](/docs/api/scalars/id))
 
 The proposal `UUID` identifier in the system.
 
 **Access level:** `public`.
 
-#### `isOwner` ([`Boolean`](/api/scalars/boolean))
+#### `isOwner` ([`Boolean`](/docs/api/scalars/boolean))
 
 Indicates if current user is the proposal's creator. Access to this field requires a logged in user, anonymous requests will always return **`false`**.
 
 **Access level:** `public`, `PB admin`.
 
-#### `name` ([`String`](/api/scalars/string))
+#### `name` ([`String`](/docs/api/scalars/string))
 
 The proposal name provided by participant.
 
 **Access level:** `public`.
 
-#### `pbCycle` ([`PBCycle`](/api/objects/pb-cycle))
+#### `pbCycle` ([`PBCycle`](/docs/api/objects/pb-cycle))
 
 PB Cycle object which this proposal belongs to. Every single proposal must belong yo a PB Cycle, this field provides access to those `PBCycle` type fields.
 
@@ -108,13 +108,13 @@ PB Cycle object which this proposal belongs to. Every single proposal must belon
 
 _**Note:** some fields may not be available for anonymous users._
 
-#### `reactions` ([`Reactions`](/api/objects/reactions))
+#### `reactions` ([`Reactions`](/docs/api/objects/reactions))
 
 The totals per reaction type received by proposal.
 
 **Access level:** `participant`, `PB admin`.
 
-#### `registeredReactions` ([`[String!]!`](/api/scalars/string))
+#### `registeredReactions` ([`[String!]!`](/docs/api/scalars/string))
 
 Return the list of reactions this proposal received. Reactions are returned as an array in which every index correspond to a type of reaction the proposal has received.
 
@@ -130,7 +130,7 @@ Return the list of reactions this proposal received. Reactions are returned as a
 | `['LIKE', 'NEUTRAL']` | Proposal has only received reactions of type `LIKE` and `NEUTRAL`, but no reactions of type `DISLIKE`. |
 | `[]`                  | Proposal has not received any reaction yet.                                                            |
 
-#### `thumbnail` ([`String`](/api/scalars/string))
+#### `thumbnail` ([`String`](/docs/api/scalars/string))
 
 The image assigned to proposal. All images are moderated using Amazon Rekognition before to accept then and before to be publicly available. The content of this field depends on the approval of provided image.
 
@@ -140,15 +140,15 @@ Rejection of an image depends on its content. Rekognition search for inappropria
 
 **Returns:** `null` | `URL`
 
-#### `totalReactions` ([`Int!`](/api/scalars/int))
+#### `totalReactions` ([`Int!`](/docs/api/scalars/int))
 
 The SUM of all reactions this proposal has received. This value includes all types of reactions.
 
 **Access level:** `public`.
 
-#### `updatedAt` ([`ISO8601DateTime!`](/api/scalars/iso-8601-date-time))
+#### `updatedAt` ([`ISO8601DateTime!`](/docs/api/scalars/iso-8601-date-time))
 
-#### `user` ([`User`](/api/objects/user))
+#### `user` ([`User`](/docs/api/objects/user))
 
 User object who created this proposal. This field provide access to all `User` type available fields.
 
@@ -157,13 +157,13 @@ This field is available only for participants or admin in the PB Cycle, for anon
 **Access level:** `participant`, `PB admin`.  
 **Returns**: `UserType` | `null`
 
-#### `userId` ([`String`](/api/scalars/string))
+#### `userId` ([`String`](/docs/api/scalars/string))
 
 The user `UUID`, creator of the proposal. This fields is available only for logged in users, other case will always return `null`
 
 **Access level:** `participant`, `PB admin`.  
 **Returns**: `UUID` | `null`
 
-#### `videoUrl` ([`VideoUrl`](/api/scalars/video-url))
+#### `videoUrl` ([`VideoUrl`](/docs/api/scalars/video-url))
 
 The video URL if it was provided by participant. This URL will point to a YouTube video URL.

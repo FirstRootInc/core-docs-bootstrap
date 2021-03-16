@@ -29,20 +29,20 @@ type AcceptPBInvitationPayload {
 
 ### Fields
 
-#### `clientMutationId` ([`String`](/api/scalars/string))
+#### `clientMutationId` ([`String`](/docs/api/scalars/string))
 
 A unique identifier for the client performing the mutation.
 
-#### `pbCycle` ([`PBCycle!`](/api/objects/pb-cycle))
+#### `pbCycle` ([`PBCycle!`](/docs/api/objects/pb-cycle))
 
 The PB cycle that the user is trying to join when accepting the invite.
 
-#### `status` ([`ID!`](/api/scalars/id))
+#### `status` ([`ID!`](/docs/api/scalars/id))
 
 The result status. If no error detected, this value will be `success`.
 
-#### `token` ([`String!`](/api/scalars/string))
+#### `token` ([`String!`](/docs/api/scalars/string))
 
-#### `type` ([`String!`](/api/scalars/string))
+#### `type` ([`String!`](/docs/api/scalars/string))
 
 The original invitation type. This type indicates the type of account that has been created for user in the PB cycle. Possible values are `ADMIN_INVITATION` or `PARTICIPANT_INVITATION`
