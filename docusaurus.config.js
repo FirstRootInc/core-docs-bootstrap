@@ -1,7 +1,7 @@
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
-  title: 'FirstRoot Participatory Budgeting API',
-  tagline: "We're the easy button for proticipatory budgeting.",
+  title: 'Documentation',
+  tagline: "Take a tour and learn about our guidelines & examples of how to integrate and use the FirstRoot API toolkit. Have fun coding!",
   url: 'https://firstrootinc.github.io',
   baseUrl: '/core-docs-bootstrap/',
   onBrokenLinks: 'warn',
