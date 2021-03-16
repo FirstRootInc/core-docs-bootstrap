@@ -7,7 +7,7 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #6cce45;
+  --ifm-color-primary: #00953B;
   --ifm-color-primary-dark: rgb(66, 183, 42);
   --ifm-color-primary-darker: rgb(64, 192, 34);
   --ifm-color-primary-darkest: rgb(59, 192, 10);
@@ -18,7 +18,7 @@
 }
 
 .docusaurus-highlight-code-line {
-  background-color: rgb(72, 77, 91);
+  background-color: #00953B;
   display: block;
   margin: 0 calc(-1 * var(--ifm-pre-padding));
   padding: 0 var(--ifm-pre-padding);

@@ -1,3 +1,4 @@
+/** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
   title: 'FirstRoot Participatory Budgeting API',
   tagline: "We're the easy button for proticipatory budgeting.",
@@ -5,7 +6,7 @@ module.exports = {
   baseUrl: '/core-docs-bootstrap/',
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/favicon-firstroot.png',
   organizationName: 'FirstRootInc', // Usually your GitHub org/user name.
   projectName: 'core-docs-bootstrap', // Usually your repo name.
   themeConfig: {
@@ -17,12 +18,12 @@ module.exports = {
       },
       items: [
         {
-          to: "/pbcycle", // adjust the location depending on your baseURL (see configuration)
+          to: "docs/pbcycle", // adjust the location depending on your baseURL (see configuration)
           label: "Concepts", // change the label with yours
           position: "left",
         },
         {
-          to: "/explorer-guide",
+          to: "docs/explorer-guide",
           label: "Tools", // change the label with yours
           position: "left",
         },
@@ -32,50 +33,45 @@ module.exports = {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: 'Firstroot',
           items: [
             {
-              label: 'Get Started',
+              label: 'API',
+              to: '/docs',
+            },
+            {
+              label: 'Help',
               to: '/',
             },
             {
-              label: 'Second Doc',
-              to: 'docs/doc2/',
+              label: 'Curiculum',
+              to: '/',
             },
           ],
         },
         {
-          title: 'Community',
+          title: 'About Firstroot',
           items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              label: 'About',
+              href: 'https://firstroot.co/about/',
             },
-            {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
-              label: 'Twitter',
-              href: 'https://twitter.com/docusaurus',
-            },
-          ],
-        },
-        {
-          title: 'More',
-          items: [
             {
               label: 'Blog',
-              to: 'blog',
+              href: 'https://firstroot.co/blog/',
             },
             {
-              label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              label: 'UX artifacts',
+              href: 'https://firstroot.co/ux-artifacts/',
+            },
+            {
+              label: 'Support',
+              href: 'https://firstroot.co/',
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © Firstroot ${new Date().getFullYear()}. All rights reserved. Built with Docusaurus.`,
     },
   },
   presets: [
@@ -83,7 +79,6 @@ module.exports = {
       '@docusaurus/preset-classic',
       {
         docs: {
-          routeBasePath: '/',
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           editUrl:
