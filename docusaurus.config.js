@@ -6,7 +6,7 @@ module.exports = {
   baseUrl: '/core-docs-bootstrap/',
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon-firstroot.png',
+  favicon: '/img/Firstroot-favicon.png',
   organizationName: 'FirstRootInc', // Usually your GitHub org/user name.
   projectName: 'core-docs-bootstrap', // Usually your repo name.
   themeConfig: {
@@ -33,6 +33,16 @@ module.exports = {
           position: "left",
         },
       ],
+    },
+    algolia: {
+      apiKey: 'e4d7dec64c7bd96a7f27002de437ccd7',
+      indexName: 'frdocs',
+      appId: '2VI4VLAFU8',
+
+      // Optional: see doc section bellow
+      // contextualSearch: true,
+
+      //... other Algolia params
     },
     footer: {
       style: 'light',
