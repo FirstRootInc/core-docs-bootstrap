@@ -5,6 +5,8 @@ module.exports = {
         'references',
         'graphql',
     ],
+  },
+  Schema: {
     ...require("./docs/api/sidebar-schema"),
   },
   CoreConceptSidebar: {
