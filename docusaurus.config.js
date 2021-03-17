@@ -18,6 +18,11 @@ module.exports = {
       },
       items: [
         {
+          to: "/docs/api/schema", // adjust the location depending on your baseURL (see configuration)
+          label: "API References", // change the label with yours
+          position: "left",
+        },
+        {
           to: "docs/pbcycle", // adjust the location depending on your baseURL (see configuration)
           label: "Concepts", // change the label with yours
           position: "left",
@@ -63,7 +68,7 @@ module.exports = {
           ],
         },
       ],
-      copyright: `Copyright © Firstroot ${new Date().getFullYear()}. All rights reserved. Built with Docusaurus.`,
+      copyright: `Copyright © Firstroot ${new Date().getFullYear()}. All rights reserved.`,
     },
   },
   presets: [
