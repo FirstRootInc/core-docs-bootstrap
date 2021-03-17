@@ -30,7 +30,7 @@ module.exports = {
       ],
     },
     footer: {
-      style: 'dark',
+      style: 'light',
       links: [
         {
           title: 'Firstroot',
@@ -38,14 +38,6 @@ module.exports = {
             {
               label: 'API',
               to: '/docs',
-            },
-            {
-              label: 'Help',
-              to: '/',
-            },
-            {
-              label: 'Curiculum',
-              to: '/',
             },
           ],
         },
@@ -66,7 +58,7 @@ module.exports = {
             },
             {
               label: 'Support',
-              href: 'https://firstroot.co/',
+              href: 'https://firstroot.co/contact/',
             },
           ],
         },
