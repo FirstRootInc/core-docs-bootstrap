@@ -6,7 +6,7 @@
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://firstrootinc.github.io/blog"/>
     <subtitle>Documentation Blog</subtitle>
-    <icon>https://firstrootinc.github.io/img/favicon-firstroot.png</icon>
+    <icon>https://firstrootinc.github.io/img/Firstroot-favicon.png</icon>
     <entry>
         <title type="html"><![CDATA[Welcome]]></title>
         <id>welcome</id>
