@@ -26,6 +26,13 @@
   }
 }
 
+@media (min-width: 576px){
+  .section {
+      padding-top: 8rem;
+      padding-bottom: 8rem;
+  }
+}
+
 .buttons {
   display: flex;
   align-items: center;
@@ -35,11 +42,26 @@
 .features {
   display: flex;
   align-items: center;
-  padding: 2rem 0;
+  padding: 4rem 0 0;
   width: 100%;
+  max-width: 1280px;
+  align-self: center;
+  padding-bottom: 4rem;
+}
+
+.imgColumn {
+  display: flex !important;
+  justify-content: center;
 }
 
 .featureImage {
-  height: 200px;
-  width: 200px;
+  height: 460px;
+  width: 460px;
+}
+
+.descriptionRow {
+  justify-content: center;
+  align-items: center;
+  margin-left: unset !important;
+  margin-right: unset !important;
 }
