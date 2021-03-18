@@ -35,14 +35,9 @@ module.exports = {
       ],
     },
     algolia: {
-      apiKey: 'e4d7dec64c7bd96a7f27002de437ccd7',
+      apiKey: '482ef5bb512503beb2189148c9cd4a34',
       indexName: 'frdocs',
       appId: '2VI4VLAFU8',
-
-      // Optional: see doc section bellow
-      // contextualSearch: true,
-
-      //... other Algolia params
     },
     footer: {
       style: 'light',
