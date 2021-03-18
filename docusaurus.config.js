@@ -40,19 +40,14 @@ module.exports = {
       appId: '2VI4VLAFU8',
     },
     footer: {
-      style: 'light',
+      logo: {
+        alt: 'Firstroot',
+        src: 'img/logo.svg',
+        href: 'https://firstroot.co/',
+      },
       links: [
         {
           title: 'Firstroot',
-          items: [
-            {
-              label: 'API',
-              to: '/docs',
-            },
-          ],
-        },
-        {
-          title: 'About Firstroot',
           items: [
             {
               label: 'About',
@@ -69,6 +64,19 @@ module.exports = {
             {
               label: 'Support',
               href: 'https://firstroot.co/contact/',
+            },
+          ],
+        },
+        {
+          title: 'Developers',
+          items: [
+            {
+              label: 'Documentation',
+              to: '/docs',
+            },
+            {
+              label: 'API References',
+              to: '/docs/api/schema',
             },
           ],
         },

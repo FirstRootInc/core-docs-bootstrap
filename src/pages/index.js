@@ -55,6 +55,11 @@ export default function Home() {
         <div className="container">
           <h1 className="hero__title">{siteConfig.title}</h1>
           <p className="hero__subtitle">{siteConfig.tagline}</p>
+          <img
+            className={clsx(styles.heroBannerLogo, 'margin-vert--md')}
+            alt="Create React App logo"
+            src={useBaseUrl('/img/presentation-mockup.png')}
+          />
         </div>
       </header>
       <main>

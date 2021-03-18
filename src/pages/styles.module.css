@@ -6,10 +6,18 @@
  */
 
 .heroBanner {
-  padding: 10rem 0;
+  padding: 6rem 0;
   text-align: center;
   position: relative;
   overflow: hidden;
+}
+
+.heroBannerLogo {
+  z-index: 10;
+  width: 65%;
+  height: 450;
+  max-width: 560px;
+  border-radius: 6px; 
 }
 
 @media screen and (max-width: 966px) {
