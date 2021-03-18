@@ -14,7 +14,7 @@ module.exports = {
       title: null ,
       logo: {
         alt: 'FirstRoot Logo',
-        src: 'img/FirstRoot-Logo.png',
+        src: '/img/logo.svg',
       },
       items: [
         {
