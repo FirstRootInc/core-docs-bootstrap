@@ -3,7 +3,7 @@ module.exports = {
   title: 'Documentation',
   tagline: "Take a tour and learn about our guidelines & examples of how to integrate and use the FirstRoot API toolkit. Have fun coding!",
   url: 'https://firstrootinc.github.io',
-  baseUrl: '/core-docs-bootstrap/',
+  baseUrl: '/build/',
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   favicon: '/img/Firstroot-favicon.png',
